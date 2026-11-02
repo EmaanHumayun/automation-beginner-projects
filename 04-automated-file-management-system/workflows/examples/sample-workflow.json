@@ -1,0 +1,53 @@
+{
+  "name": "Automated File Management System Workflow Template",
+  "nodes": [
+    {
+      "name": "Webhook Ingestion Trigger",
+      "type": "webhook",
+      "position": [
+        100,
+        200
+      ]
+    },
+    {
+      "name": "Payload Schema Validation",
+      "type": "validation",
+      "position": [
+        300,
+        200
+      ]
+    },
+    {
+      "name": "Execute Action Handler",
+      "type": "action",
+      "position": [
+        500,
+        200
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Ingestion Trigger": {
+      "main": [
+        [
+          {
+            "node": "Payload Schema Validation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Payload Schema Validation": {
+      "main": [
+        [
+          {
+            "node": "Execute Action Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
