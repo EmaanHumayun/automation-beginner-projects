@@ -1,0 +1,14 @@
+{
+  "name": "automated-email-notification-system",
+  "version": "1.0.0",
+  "description": "Transactional email notification service ingesting authenticated webhooks, compiling HTML templates, and dispatching notifications.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/test-notification.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
